@@ -1,7 +1,7 @@
 {
   "name": "reactjs-basics",
   "version": "1.0.0",
-  "description": "Some basic ReactJS",
+  "description": "Some basic ReactJS using Redux",
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
@@ -11,7 +11,7 @@
   "keywords": [
     "reactjs"
   ],
-  "author": "Maximilian Schwarzmueller",
+  "author": "Sri Sathwik",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.0",
