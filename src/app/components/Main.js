@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export const Main =(props)=> {
+export const Main = (props)=> {
         return (
             <div>
                 <div className="row">
@@ -12,9 +12,9 @@ export const Main =(props)=> {
                     <div className="col-md-12">
                         <button
                             className="btn btn-primary"
-                            onClick={() => props.changeUsername()}>Change the Username</button>
+                            onClick={() => props.changeUsername('John Doe')}>Change the Username</button>
                     </div>
                 </div>
             </div>
         );
-}
+      };

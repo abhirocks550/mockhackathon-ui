@@ -1,7 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import { logger } from "redux-logger";
-import thunk from "redux-thunk"
-import math from "./reducers/mathReducer"
-import user from "./reducers/userReducer"
-const store = createStore(combineReducers({ math, user }), {}, applyMiddleware(logger, thunk))
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { logger } from 'redux-logger';
+import thunk from 'redux-thunk';
+import user from './reducers/userReducer';
+const store = createStore(combineReducers({ user }), {}, applyMiddleware(logger, thunk));
 export default store;

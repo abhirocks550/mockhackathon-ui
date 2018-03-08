@@ -1,7 +1,7 @@
 {
-  "name": "reactjs-basics",
+  "name": "course-tracker",
   "version": "1.0.0",
-  "description": "Some basic ReactJS using Redux",
+  "description": "React application to track course status.",
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
@@ -11,7 +11,7 @@
   "keywords": [
     "reactjs"
   ],
-  "author": "Sri Sathwik",
+  "author": "HCL",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.0",
