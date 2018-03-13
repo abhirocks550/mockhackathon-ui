@@ -13,7 +13,8 @@ const NavBar = (props) => {
                     <ul className="nav navbar-nav">
                         <li><Link to="/" activeClassName="active" >Add Course</Link></li>
                         <li>
-                            <Link to="/existingCourse" activeClassName="active">Existing Courses</Link></li>
+                            <Link to="/existingCourse" activeClassName="active">Existing Courses</Link>
+                        </li>
                     </ul>
                     <ul className="nav navbar-nav navbar-right">
                         <li><Link to="#"><span className="glyphicon glyphicon-log-in"></span> Logout</Link></li>
