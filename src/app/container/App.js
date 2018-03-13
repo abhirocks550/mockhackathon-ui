@@ -21,16 +21,24 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import HomePage from './HomePage';
 import Header from '../components/NavigationBar/Header';
+import NavBar from '../components/NavigationBar/NavigationBar';
+import {browserHistory} from 'react-router';
 
 class App extends React.Component {
-    componentDidMount () {
-        console.log("LLLLL",this.context.location.pathname);
-    }
 
   render() {
+    var Child;
+    
+    var currentRoute = this.props.location.pathname;
+    if (currentRoute == '/Login' || currentRoute == '/NewUser') {
+        Child = Header;
+    } else {
+        Child = NavBar;
+    }
+    
     return (
       <div className="container">
-        <Header />
+        <Child />
         {this.props.children}
       </div>
     );

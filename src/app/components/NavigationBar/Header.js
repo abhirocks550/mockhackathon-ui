@@ -13,6 +13,7 @@ class HeaderSection extends React.Component {
 
     this.hanldeLogin = this.hanldeLogin.bind(this);
     this.hanldeRegistration  = this.hanldeRegistration.bind(this);
+    //this.addCourse  = this.addCourse.bind(this);
   }
 
   hanldeLogin() {
@@ -22,6 +23,10 @@ class HeaderSection extends React.Component {
   hanldeRegistration () {
     this.context.router.push('/NewUser');
   }
+
+   /*addCourse () {
+    this.context.router.push('/addCourse');
+   }*/
 
   render() {
     return (
@@ -33,6 +38,7 @@ class HeaderSection extends React.Component {
 
                 <button className="btn btn-default pull-right spacing" onClick={this.hanldeLogin}>Login</button>&nbsp;&nbsp;
                 <button className="btn btn-default pull-right" onClick={this.hanldeRegistration}>New User</button>
+                
                 <div className="clearfix"></div>
             </div>
         </div>
