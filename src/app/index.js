@@ -8,6 +8,7 @@ import AddCourse from './container/AddCourse';
 import NewUser from './container/NewUser';
 import Login from './container/Login';
 import HomePage from './container/HomePage';
+import Courses from '../app/components/Courses/Courses';
 
 render(
     <Provider store={store}>
@@ -17,7 +18,7 @@ render(
                 <Route path="/addCourse" component={AddCourse}/>
                 <Route path="/login" component={Login }/>
                 <Route path="/newUser" component={NewUser}/>
-                <Route path="/existingCourse" component={AddCourse}/>
+                <Route path="/existingCourse" component={Courses}/>
             </Route>
         </Router>
     </Provider>, 

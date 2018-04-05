@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as addCourseActions from '../actions/addCourseActions';
 import { connect } from 'react-redux';
 import { updateInput } from '../actions/addCourseActions';
+import axios from 'axios';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -13,37 +14,25 @@ class HomePage extends React.Component {
       };
   }
 
+  saveUser() {
+    axios.get('https://api.github.com/users/abhirocks550')
+    .then(response => console.log(response.data.name));
+  }
+
   render() {
     return (
         <div className="container">
-          <div className="row">
-            <div className="col-sm-4">
-              <ul>
-              <h3>Student Login</h3>
-              <li><p>Login will give the access of courses..</p></li>
-              <li><p>Courses history which are recently browsing..</p></li>
-              <li><p>Add Courses to the portal..</p></li>
-              <li><p>Subscribe the coures</p></li>
-              </ul>
-            </div>
-            <div className="col-sm-4">
-            <ul>
-              <h3>New User/Student Registatrion</h3>
-              <li><p>Add skillset of the new user to access the interested courses</p></li>
-              <li><p>Helps us to understand the user interests</p></li>
-              <li><p>Assign the course material based on skillset</p></li>
-            </ul>
-            </div>
-            <div className="col-sm-4">
-            <ul>
-              <h3>Add/Display List of Courses</h3> 
-              <li><p>Add a course..</p></li>
-              <li><p>Remove a course..</p></li>
-              <li><p>List of courses..</p></li>
-              <li><p>Filter courses..</p></li>
-            </ul>
-            </div>
+         <form method="post">
+          <div className="form-group">
+            <label>Name:</label>
+            <input type="text" className="form-control" id="name" placeholder="Enter name" name="name" />
           </div>
+          <div className="form-group">
+            <label>Designation:</label>
+            <input type="text" className="form-control" id="designation" placeholder="Enter password" name="designation" />
+        </div>
+        <button type="button" onClick={this.saveUser} className="btn btn-default">Submit</button>
+      </form>
         </div>
     );
   }

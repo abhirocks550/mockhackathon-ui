@@ -8,12 +8,12 @@ const NavBar = (props) => {
             <nav className="navbar navbar-inverse">
                 <div className="container-fluid">
                     <div className="navbar-header" id="navBarHeading">
-                        <span>Course Tracker</span>
+                        <span>Employee Registration</span>
                     </div>
                     <ul className="nav navbar-nav">
-                        <li><Link to="/" activeClassName="active" >Add Course</Link></li>
+                        <li><Link to="/" activeClassName="active" >Add Employee</Link></li>
                         <li>
-                            <Link to="/existingCourse" activeClassName="active">Existing Courses</Link>
+                            <Link to="/existingCourse" activeClassName="active">Get Employee</Link>
                         </li>
                     </ul>
                     <ul className="nav navbar-nav navbar-right">

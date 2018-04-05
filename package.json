@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "React application to track course status.",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.1"
+  },
   "scripts": {
     "start": "npm run build",
     "build": "webpack -d && copy src\\index.html dist\\index.html && webpack-dev-server --content-base src/ --inline --hot --history-api-fallback",
@@ -14,6 +17,7 @@
   "author": "HCL",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.10",
